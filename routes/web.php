@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'homeController@create');
+Route::post('/', 'homeController@store');
+Route::get('/listado', 'listadoController@index');
+Route::get('/listado/{nombre}', 'listadoController@index');
